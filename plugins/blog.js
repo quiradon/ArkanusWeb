@@ -22,6 +22,8 @@ db.serialize(() => {
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         titulo TEXT NOT NULL,
         conteudo TEXT NOT NULL,
+        image TEXT NOT NULL,
+        desc TEXT NOT NULL,
         data TEXT NOT NULL,
         autor_id INTEGER,
         tag_id_1 INTEGER,
@@ -38,6 +40,8 @@ db.serialize(() => {
         SELECT 
         Posts.id AS id, 
         Posts.titulo AS titulo, 
+        Posts.image AS image,
+        Posts.desc AS desc,
         Posts.conteudo AS conteudo, 
         Posts.data AS data, 
         Autores.nome AS autor, 
@@ -53,7 +57,6 @@ db.serialize(() => {
         LEFT JOIN Tags AS Tags3 ON Posts.tag_id_3 = Tags3.id`);
 });
 
-db.close();
 
 
 function main() {
@@ -61,7 +64,16 @@ function main() {
 }
 
 async function mapPosts() {
-
+    //pegue todos os posts da view ordenados do mais novo para o mais antigo
+    const posts = await new Promise((resolve, reject) => {
+        db.all(`SELECT * FROM PostsView ORDER BY data DESC`, (err, rows) => {
+            if (err) {
+                reject(err);
+            }
+            resolve(rows);
+        });
+    });
+    return posts;
 }
 
 module.exports = { main, mapPosts };

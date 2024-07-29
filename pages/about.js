@@ -54,7 +54,7 @@ function page(idioma, rota) {
     return `
 <!DOCTYPE html>
 <html lang="${t.lang}">
-${head(`${t.lang}${rota}`,`Sobre`,t.PageNotFound.desc)}
+${head(`${t.lang}${rota}`,`Sobre`,'Conheça um pouco mais sobre a Arkanus e sua equipe')}
 <body>
     ${nav(t, rota)}
     <section>

@@ -10,19 +10,20 @@ const {mapPosts} = require('../plugins/blog')
  */
 
 
-function page(idioma, rota) {
+async function page(idioma, rota) {
     const t = idioma
+    const posts = await mapPosts() //pegue apenas os 5 primeiros itens
+
     return `
 <!DOCTYPE html>
 <html lang="${t.lang}" data-bs-theme="dark">
-${head(`${t.lang}${rota}`,`Inicio`,"test")}
+${head(`${t.lang}${rota}`,`Inicio`,'Arkanus - Desenvolvimento de Sites e Aplicativos')}
 <body>
-    ${mapPosts().then(posts => console.log(posts))}
     ${nav(t, rota)}
     ${landing()}
     ${services()}
     ${portifolio()}
-    ${blog()}
+    ${blog(posts)}
     ${footer(t,rota)}
         ${scripts}
     <script src='/static/js/landing-animation.js' async></script>
@@ -109,22 +110,22 @@ function portifolio() {
 </section>`
 }
 
-function blog() {
+function blog(posts) {
     return `
     <section>
     ${tag_title_paragraph("Blog","Ultimas Postagens","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ")}
     <div class="container">
     <div class="row justify-content-center align-items-center">
         <div class="col-10 col-sm-12 col-md-12 col-lg-10 col-xl-6 col-xxl-6 offset-xl-0 p-1">
-                     ${service_card("Apps","Desenvolvimento de sites, apps e automações","/static/img/misc/services/web_development.avif","Desenvolvimento Web")}
+                     ${service_card(posts[0]?.titulo ?? "Nulo",posts[0]?.desc ?? "Nulo",posts[0]?.image ?? "/static/img/misc/services/web_development.avif",posts[0]?.titulo ?? "Nulo")}
         </div>
         <div class="col-10 col-sm-6 col-md-6 col-lg-5 col-xl-3 col-xxl-3 offset-xl-0 d-flex flex-column p-1">
-                     ${service_card("Apps","Desenvolvimento de sites, apps e automações","/static/img/misc/services/web_development.avif","Desenvolvimento Web")}
-                     ${service_card("Apps","Desenvolvimento de sites, apps e automações","/static/img/misc/services/web_development.avif","Desenvolvimento Web")}
+                      ${service_card(posts[1]?.titulo ?? "Nulo",posts[1]?.desc ?? "Nulo",posts[1]?.image ?? "/static/img/misc/services/web_development.avif",posts[1]?.titulo ?? "Nulo")}
+                      ${service_card(posts[2]?.titulo ?? "Nulo",posts[2]?.desc ?? "Nulo",posts[2]?.image ?? "/static/img/misc/services/web_development.avif",posts[2]?.titulo ?? "Nulo")}
         </div>
         <div class="col-10 col-sm-6 col-md-6 col-lg-5 col-xl-3 col-xxl-3 offset-xl-0 d-flex flex-column p-1">
-                      ${service_card("Apps","Desenvolvimento de sites, apps e automações","/static/img/misc/services/web_development.avif","Desenvolvimento Web")}
-                      ${service_card("Apps","Desenvolvimento de sites, apps e automações","/static/img/misc/services/web_development.avif","Desenvolvimento Web")}
+                       ${service_card(posts[3]?.titulo ?? "Nulo",posts[3]?.desc ?? "Nulo",posts[3]?.image ?? "/static/img/misc/services/web_development.avif",posts[3]?.titulo ?? "Nulo")}
+                       ${service_card(posts[4]?.titulo ?? "Nulo",posts[4]?.desc ?? "Nulo",posts[4]?.image ?? "/static/img/misc/services/web_development.avif",posts[4]?.titulo ?? "Nulo")}
         </div>
     </div>
 </div>
