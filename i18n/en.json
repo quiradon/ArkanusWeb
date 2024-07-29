@@ -1,0 +1,58 @@
+{
+    "PageNotFound": {
+        "btn": "Voltar ao inicio",
+        "desc": "Ops! Parece que você encontrou uma página que não existe mais. Não se preocupe, às vezes isso acontece durante a navegação. Enquanto isso, explore outras partes do nosso site para encontrar o que procura.",
+        "title": "Página Não Encontrada"
+    },
+    "footer": {
+        "about": "Sobre",
+        "arkanus": {
+            "desc": "Transformando seus sonhos em realidade com várias linhas de codigo."
+        },
+        "legal": "Legal",
+        "map": "Mapa do Site",
+        "priv": "Politica de Privacidade",
+        "quest": "Objetivo",
+        "start": "Página Inicial",
+        "team": "Equipe",
+        "tos": "Termos de Uso",
+        "util": "Utilitário"
+    },
+
+    "nav": {
+        "add": "Adicionar Bot",
+        "docs": {
+            "changelogs": {
+                "desc": "Veja o histórico de atualizações do bot",
+                "name": "Atualizações"
+            },
+            "cmds": {
+                "docs": "Veja a lista de comandos e features",
+                "title": "Lista de Comandos"
+            },
+            "dices": {
+                "desc": "Guia de como rolar dados no bot",
+                "names": "Rolagem de Dados"
+            },
+            "title": "Documentação"
+        },
+        "lang": {
+            "title": "Idioma"
+        },
+        "tools": {
+            "names": {
+                "desc": "Gere nomes para seus personagens",
+                "title": "Gerador de Nomes"
+            },
+            "poker": {
+                "desc": "Puxe uma carta aleatória do baralho",
+                "name": "Cartas de Poker"
+            },
+            "tarot": {
+                "desc": "Puxe uma carta do baralho da fortuna",
+                "name": "Cartas de Tarot"
+            },
+            "title": "Ferramentas"
+        }
+    }
+}

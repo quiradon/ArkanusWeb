@@ -1,0 +1,24 @@
+{
+  "name": "arkanus-web",
+  "version": "1.0.0",
+  "description": "A Static HTML page generator",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx wrangler pages dev dist/ d1 create",
+    "build": "node build.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon build.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "html-minifier": "^4.0.0",
+    "http": "^0.0.1-security",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "wrangler": "^3.51.2"
+  }
+}
