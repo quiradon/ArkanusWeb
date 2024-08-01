@@ -1,3 +1,16 @@
+.BlogCardPost:hover {
+  scale: 1.05;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.4);
+  transition: all ease-in-out 0.2s;
+  /* Mude o mouse para click */
+  cursor: pointer;
+}
+
+.BlogCardPost {
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+  transition: all ease-in-out 0.2s;
+}
+
 .bg1 {
   background: url("/static/img/paterns/quadrado.svg") top / auto repeat-x;;
 

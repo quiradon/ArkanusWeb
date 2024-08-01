@@ -66,7 +66,7 @@ function main() {
 async function mapPosts() {
     //pegue todos os posts da view ordenados do mais novo para o mais antigo
     const posts = await new Promise((resolve, reject) => {
-        db.all(`SELECT * FROM PostsView ORDER BY data DESC`, (err, rows) => {
+        db.all(`SELECT id,titulo,image,data,tag1,tag2,tag3,link,autor,pictureUrl,desc FROM PostsView ORDER BY data DESC`, (err, rows) => {
             if (err) {
                 reject(err);
             }
@@ -76,4 +76,17 @@ async function mapPosts() {
     return posts;
 }
 
-module.exports = { main, mapPosts };
+async function getTags() {
+    //pegue todas as tags
+    const tags = await new Promise((resolve, reject) => {
+        db.all(`SELECT * FROM Tags`, (err, rows) => {
+            if (err) {
+                reject(err);
+            }
+            resolve(rows);
+        });
+    });
+    return tags;
+}
+
+module.exports = { main, mapPosts, getTags };

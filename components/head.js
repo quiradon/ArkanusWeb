@@ -43,11 +43,11 @@ function head(rota,title,desc,pictureURL) {
     <link rel="stylesheet" href="/static/css/animate.min.css">
     <link rel="stylesheet" href="/static/css/styles.css">
 
-    <link rel="icon" type="image/x-icon" sizes="512x512" href='./static/img/icons/white.svg'>
-    <link rel="icon" type="image/x-icon" sizes="192x192" href='./static/img/icons/white.svg'>
-    <link rel="icon" type="image/x-icon" sizes="180x180" href='./static/img/icons/white.svg'>
-    <link rel="icon" type="image/x-icon" sizes="32x32" href='./static/img/icons/white.svg'>
-    <link rel="icon" type="image/x-icon sizes="16x16" href='./static/img/icons/white.svg'>
+    <link rel="icon" type="image/x-icon" sizes="512x512" href='/static/img/icons/white.svg'>
+    <link rel="icon" type="image/x-icon" sizes="192x192" href='/static/img/icons/white.svg'>
+    <link rel="icon" type="image/x-icon" sizes="180x180" href='/static/img/icons/white.svg'>
+    <link rel="icon" type="image/x-icon" sizes="32x32" href='/static/img/icons/white.svg'>
+    <link rel="icon" type="image/x-icon sizes="16x16" href='/static/img/icons/white.svg'>
     <link rel="canonical" href="${url}${rotaRoot}">
     <link rel="alternate" hreflang="pt" href="${url}/pt${rotaRoot}">
     <link rel="alternate" hreflang="en" href="${url}${rotaRoot}">
