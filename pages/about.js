@@ -68,7 +68,7 @@ ${head(`${t.lang}${rota}`,`Sobre`,'Conheça um pouco mais sobre a Arkanus e sua 
             ${genMemberCard('Quir', 'IU/UX', 'quiradon', '/static/img/team/Frame 7.avif', 'https://www.instagram.com/quiradon','https://github.com/quiradon','https://twitter.com/quiradon')}
             ${genMemberCard('Rinne', 'CTO','semanual','/static/img/team/Frame 8.avif', '','https://github.com/semanual')}
             ${genMemberCard('Bruno', 'CMO', 'bruno.devv_', '/static/img/team/Frame 1.avif', 'https://www.instagram.com/bruno.devv_','','https://x.com/BrunoDevv')}
-            ${genMemberCard('Kelvyn','CISO & SFX','kelvyn166','/static/img/team/Frame 6.avif','','https://github.com/kelvyn166','')}
+            ${genMemberCard('Kelvyn','CISO & VFX','kelvyn166','/static/img/team/Frame 6.avif','','https://github.com/kelvyn166','')}
             ${genMemberCard('Luis','Artist','lu1z_n3t0','/static/img/team/Frame 2.avif')}
             ${genMemberCard('Deborah','SFX','deb86_','/static/img/team/Frame 3.avif','','','https://x.com/deb86_')}
             

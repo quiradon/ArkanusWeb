@@ -57,16 +57,39 @@ db.serialize(() => {
         LEFT JOIN Tags AS Tags3 ON Posts.tag_id_3 = Tags3.id`);
 });
 
+function markdownToHTML(markdown) {
+    const markdownIt = require('markdown-it');
+    const md = new markdownIt();
+    return md.render(markdown);
+}
 
+
+function genUrl(name){
+    const uwu = name.toLowerCase().replace(/ /g, '-').toLowerCase()
+    return `${uwu}`
+}
 
 function main() {
-    // Código principal aqui
+    buildPostsinHTML();
 }
 
 async function mapPosts() {
     //pegue todos os posts da view ordenados do mais novo para o mais antigo
     const posts = await new Promise((resolve, reject) => {
         db.all(`SELECT id,titulo,image,data,tag1,tag2,tag3,link,autor,pictureUrl,desc FROM PostsView ORDER BY data DESC`, (err, rows) => {
+            if (err) {
+                reject(err);
+            }
+            resolve(rows);
+        });
+    });
+    return posts;
+}
+
+async function mapPostsWithContent() {
+    //pegue todos os posts da view ordenados do mais novo para o mais antigo
+    const posts = await new Promise((resolve, reject) => {
+        db.all(`SELECT id,titulo,image,data,tag1,tag2,tag3,link,autor,pictureUrl,desc,conteudo FROM PostsView ORDER BY data DESC`, (err, rows) => {
             if (err) {
                 reject(err);
             }
@@ -88,5 +111,92 @@ async function getTags() {
     });
     return tags;
 }
+
+async function buildPostsinHTML() {
+    const posts = await mapPostsWithContent();
+    const fs = require('fs');
+    const path = require('path');
+    const dir = './dist/blog';
+    if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+    }
+    for (let i = 0; i < posts.length; i++) {
+        const post = posts[i];
+        const postPath = path.join(dir, `${genUrl(post.titulo)}.html`);
+        fs.writeFileSync(postPath, page(post));
+        
+        // Calcula o progresso e exibe a barra de progresso
+        const progress = ((i + 1) / posts.length) * 10;
+        const progressBar = '█'.repeat(Math.floor(progress)) + '░'.repeat(10 - Math.floor(progress));
+        console.log(`Progresso: [${progressBar}] ${Math.floor(progress * 10)}%`);
+    }
+}
+
+const {nav, footer} = require('../components/navbar')
+const scripts = require('../components/bootscripts')
+const {head} = require('../components/head')
+
+let pt = require('../i18n/pt.json');
+function page(post) {
+    return `
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="dark">
+${head(`/teste`,post.titulo,post.desc,post.image)}
+<body>
+    ${nav(pt, '/teste')}
+    
+    ${templatePost(post.titulo,post.image ?? 'https://via.placeholder.com/1920x1080',post.desc,post.data,post.autor,post.link,post.pictureUrl)}
+    <section id="content" class="d-flex d-xl-flex d-xxl-flex justify-content-center align-items-center align-content-center justify-content-xl-center justify-content-xxl-center">
+    <div class="container-sm px-md-5 mx-md-5 py-0">
+        <div class="row mx-md-5">
+            <div class="col">
+               ${markdownToHTML(post.conteudo)}
+            </div>
+        </div>
+    </div>
+</section>
+    ${footer(pt,'/teste')}
+    ${scripts}
+</body>
+</html>
+`
+}
+
+
+
+function templatePost(title,img_cape,desc,date,author_name,author_link,author_img) {
+    if (img_cape == null) {
+        img_cape = ""
+    } else {
+        img_cape = `<img class="rounded img-fluid mb-3" src="${img_cape}" />`
+    }
+    return `
+    <section id="start" class="d-flex d-xl-flex d-xxl-flex justify-content-center align-items-center align-content-center justify-content-xl-center justify-content-xxl-center" style="background: url('/static/img/paterns/quadrado.svg') top / auto repeat-x;">
+    <div class="container-sm pt-2 pt-xl-3 px-lg-5 mx-lg-5">
+        <div class="row mt-4 pt-4 mx-md-5">
+            <div class="col-auto">
+                <h1 class="display-4 fw-bold mb-3" style="font-family: 'PT Sans', sans-serif;">${title}</h1>
+                <div class="mb-4">
+                    <div class="row row-cols-1 row-cols-sm-2">
+                         <div class="col-xxl-4">
+                            <h5 class="text-muted">Escrito Por</h5>
+                            <a href="${author_link}" class="d-flex align-items-center" target="_blank">
+                                <img class="img-fluid rounded-circle me-2" height="30px" width="30px" src="${author_img}" />
+                                <h5 class="text-muted mb-0">${author_name}</h5>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <h5 class="text-muted">Publicado Em</h5>
+                            <h5>${date}</h5>
+                        </div>
+                    </div>
+                </div>${img_cape}
+                <p class="text-muted">${desc}</p>
+            </div>
+        </div>
+    </div>
+</section>`
+}
+
 
 module.exports = { main, mapPosts, getTags };

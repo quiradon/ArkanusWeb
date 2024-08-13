@@ -14,7 +14,7 @@ function genCard(title,date, img, desc, autor, autorImg, tag1,tag2,tag3){
         })
         .join('');
     return `
-    <a href="https://arkanus.app/blog/${postUrl}" class="link-unstyled">
+    <a href="/blog/${postUrl}" class="link-unstyled">
         <div class="col">
             <div class="card BlogCardPost"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="${img}" />
                 <div class="card-body p-4">${tagsList}
@@ -40,7 +40,6 @@ async function page(idioma, rota) {
     if (idiomaUpdates == 'pt') {
         idiomaUpdates = 'pt-BR'
     } 
-    const lang = idiomaR(t)
     const tags = await getTags()
     const tagsList = tags.map(tag => {
         return `<option value="${tag.nome}">${tag.nome}</option>

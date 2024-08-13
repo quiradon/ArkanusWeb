@@ -1,7 +1,7 @@
-const {nav, footer} = require('../components/navbar')
-const scripts = require('../components/bootscripts')
-const {head} = require('../components/head')
-const {idiomaR} = require('../caminho')
+const {nav, footer} = require('../../components/navbar')
+const scripts = require('../../components/bootscripts')
+const {head} = require('../../components/head')
+const {idiomaR} = require('../../caminho')
 
 
 function page(idioma, rota) {

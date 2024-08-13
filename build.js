@@ -2,6 +2,7 @@ const { traduz } = require('./translation.js')
 const fs = require('fs')
 const path = require('path')
 const pluginLoader = require('./pluginLoader.js')
+
 const exportFolder = path.join(__dirname, 'dist')
 function copyFolderRecursiveSync(source, target) {
     let files = []

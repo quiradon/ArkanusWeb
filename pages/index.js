@@ -6,7 +6,7 @@ const {mapPosts} = require('../plugins/blog')
 
 function genUrl(name){
     const uwu = name.toLowerCase().replace(/ /g, '-').toLowerCase()
-    return `https://arkanus.app/blog/${uwu}`
+    return `/blog/${uwu}`
 }
 /**
  * 
@@ -70,7 +70,7 @@ function service_card(name,desc,img_url,alt,href){
                 <div class="card w-100"><img class="img-fluid card-img-top w-100 d-block card-img" alt="${alt}" src="${img_url}" />
                     <div class="d-flex flex-column card-img-overlay p-3 flex-fill">
                         <h2 class="text-light mt-auto card-title mb-0">${name}</h2>
-                        <p class="text-light mb-0">${desc}</p>
+                        <p class="text-light card-desc mb-0">${desc}</p>
                     </div>
                 </div>
             </a>
