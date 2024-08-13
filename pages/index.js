@@ -3,6 +3,11 @@ const scripts = require('../components/bootscripts')
 const {head} = require('../components/head')
 const {tag_title_paragraph} = require('../components/titles')
 const {mapPosts} = require('../plugins/blog')
+
+function genUrl(name){
+    const uwu = name.toLowerCase().replace(/ /g, '-').toLowerCase()
+    return `https://arkanus.app/blog/${uwu}`
+}
 /**
  * 
  * @param {*} idioma 
@@ -81,12 +86,12 @@ function services(){
             <h1 class="display-5 fw-bold mt-0">Conheça nossas Soluções!</h1>
         </div>
         <div class="row">
-          <div class="col d-flex flex-grow-1 mb-4">
-          ${service_card("Apps","Desenvolvimento de sites, apps e automações","/static/img/misc/services/web_development.avif","Desenvolvimento Web")}
-          </div>
-          <div class="col d-flex flex-grow-1 mb-4">
-          ${service_card("Studios","Desenvolvimento de Jogos","/static/img/misc/services/games.avif","Desenvolvimento Web")}
-          </div>
+        <div class="col-12 col-md-6 col-lg-4 d-flex flex-grow-1 mb-4">
+            ${service_card("Apps","Desenvolvimento de sites, apps e automações","/static/img/misc/services/apps.avifs","Desenvolvimento Web")}
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 d-flex flex-grow-1 mb-4">
+            ${service_card("Studios","Desenvolvimento de Jogos","/static/img/misc/services/studios.avifs","Desenvolvimento Web")}
+        </div>
         </div>
     </div>
 </section>`
@@ -117,15 +122,15 @@ function blog(posts) {
     <div class="container">
     <div class="row justify-content-center align-items-center">
         <div class="col-10 col-sm-12 col-md-12 col-lg-10 col-xl-6 col-xxl-6 offset-xl-0 p-1">
-                     ${service_card(posts[0]?.titulo ?? "Nulo",posts[0]?.desc ?? "Nulo",posts[0]?.image ?? "/static/img/misc/services/web_development.avif",posts[0]?.titulo ?? "Nulo")}
+                     ${service_card(posts[0]?.titulo ?? "Nulo",posts[0]?.desc ?? "Nulo",posts[0]?.image ?? "/static/img/misc/services/web_development.avif",posts[0]?.titulo ?? "Nulo",genUrl(posts[0]?.titulo ?? "Nulo"))}
         </div>
         <div class="col-10 col-sm-6 col-md-6 col-lg-5 col-xl-3 col-xxl-3 offset-xl-0 d-flex flex-column p-1">
-                      ${service_card(posts[1]?.titulo ?? "Nulo",posts[1]?.desc ?? "Nulo",posts[1]?.image ?? "/static/img/misc/services/web_development.avif",posts[1]?.titulo ?? "Nulo")}
-                      ${service_card(posts[2]?.titulo ?? "Nulo",posts[2]?.desc ?? "Nulo",posts[2]?.image ?? "/static/img/misc/services/web_development.avif",posts[2]?.titulo ?? "Nulo")}
+                      ${service_card(posts[1]?.titulo ?? "Nulo",posts[1]?.desc ?? "Nulo",posts[1]?.image ?? "/static/img/misc/services/web_development.avif",posts[1]?.titulo ?? "Nulo",genUrl(posts[1]?.titulo ?? "Nulo"))}
+                      ${service_card(posts[2]?.titulo ?? "Nulo",posts[2]?.desc ?? "Nulo",posts[2]?.image ?? "/static/img/misc/services/web_development.avif",posts[2]?.titulo ?? "Nulo",genUrl(posts[2]?.titulo ?? "Nulo"))}
         </div>
         <div class="col-10 col-sm-6 col-md-6 col-lg-5 col-xl-3 col-xxl-3 offset-xl-0 d-flex flex-column p-1">
-                       ${service_card(posts[3]?.titulo ?? "Nulo",posts[3]?.desc ?? "Nulo",posts[3]?.image ?? "/static/img/misc/services/web_development.avif",posts[3]?.titulo ?? "Nulo")}
-                       ${service_card(posts[4]?.titulo ?? "Nulo",posts[4]?.desc ?? "Nulo",posts[4]?.image ?? "/static/img/misc/services/web_development.avif",posts[4]?.titulo ?? "Nulo")}
+                       ${service_card(posts[3]?.titulo ?? "Nulo",posts[3]?.desc ?? "Nulo",posts[3]?.image ?? "/static/img/misc/services/web_development.avif",posts[3]?.titulo ?? "Nulo",genUrl(posts[3]?.titulo ?? "Nulo"))}
+                       ${service_card(posts[4]?.titulo ?? "Nulo",posts[4]?.desc ?? "Nulo",posts[4]?.image ?? "/static/img/misc/services/web_development.avif",posts[4]?.titulo ?? "Nulo",genUrl(posts[4]?.titulo ?? "Nulo"))}
         </div>
     </div>
 </div>

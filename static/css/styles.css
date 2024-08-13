@@ -1,3 +1,37 @@
+.HoverGrow {
+  transition: all 0.2s ease-in-out;
+}
+
+.HoverGrow:hover {
+  transform: scale(1.05);
+}
+
+
+.bs-icon.bs-icon-rounded {
+  border-radius: .5rem;
+}
+.bs-icon.bs-icon-primary {
+  color: var(--bs-white);
+  background: var(--bs-primary);
+}
+
+.bs-icon {
+  --bs-icon-size: 2rem;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--bs-icon-size);
+  width: calc(var(--bs-icon-size) * 2);
+  height: calc(var(--bs-icon-size) * 2);
+  color: var(--bs-primary);
+}
+
+
+
+
+
+
 .BlogCardPost:hover {
   scale: 1.05;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.4);
@@ -179,17 +213,6 @@ html {
   text-decoration: inherit!important;
 }
 
-.bs-icon {
-  --bs-icon-size: .75rem;
-  display: flex;
-  flex-shrink: 0;
-  justify-content: center;
-  align-items: center;
-  font-size: var(--bs-icon-size);
-  width: calc(var(--bs-icon-size) * 2);
-  height: calc(var(--bs-icon-size) * 2);
-  color: var(--bs-primary);
-}
 
 .dropdown-item:focus, .dropdown-item:hover {
   background-color: var(--bs-dark-border-subtle);
@@ -230,17 +253,6 @@ html {
   transition: 0.35s;
 }
 
-.bs-icon {
-  --bs-icon-size: .75rem;
-  display: flex;
-  flex-shrink: 0;
-  justify-content: center;
-  align-items: center;
-  font-size: var(--bs-icon-size);
-  width: calc(var(--bs-icon-size) * 2);
-  height: calc(var(--bs-icon-size) * 2);
-  color: var(--bs-primary);
-}
 
 
 

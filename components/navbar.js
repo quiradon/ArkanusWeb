@@ -42,25 +42,25 @@ function nav(t,rota) {
         </svg>Projetos<svg class="mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="-96 0 512 512" width="1em" height="1em" fill="currentColor">
             <path d="M182.6 470.6c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-9.2-9.2-11.9-22.9-6.9-34.9s16.6-19.8 29.6-19.8H288c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-128 128z"></path>
         </svg></a>
-    <div class="dropdown-menu shadow" data-bs-popper="none"><a class="dropdown-item d-flex justify-content-sm-start" href="https://rpg.arkanus.app" rel="help" data-bs-target="https://rpg.arkanus.app">
+    <div class="dropdown-menu shadow" data-bs-popper="none"><a class="dropdown-item d-flex justify-content-sm-start" target="_blank" href="https://rpg.arkanus.app" rel="help" data-bs-target="https://rpg.arkanus.app">
             <div class="d-flex justify-content-center align-items-center m-2"><svg class="fs-1 text-danger border rounded border-0 p-2 fme-2 nav_icon_background me-2" xmlns="http://www.w3.org/2000/svg" viewBox="-32 0 512 512" width="1em" height="1em" fill="currentColor">
                     <path d="M201 10.3c14.3-7.8 31.6-7.8 46 0L422.3 106c5.1 2.8 8.3 8.2 8.3 14s-3.2 11.2-8.3 14L231.7 238c-4.8 2.6-10.5 2.6-15.3 0L25.7 134c-5.1-2.8-8.3-8.2-8.3-14s3.2-11.2 8.3-14L201 10.3zM23.7 170l176 96c5.1 2.8 8.3 8.2 8.3 14V496c0 5.6-3 10.9-7.8 13.8s-10.9 3-15.8 .3L25 423.1C9.6 414.7 0 398.6 0 381V184c0-5.6 3-10.9 7.8-13.8s10.9-3 15.8-.3zm400.7 0c5-2.7 11-2.6 15.8 .3s7.8 8.1 7.8 13.8V381c0 17.6-9.6 33.7-25 42.1L263.7 510c-5 2.7-11 2.6-15.8-.3s-7.8-8.1-7.8-13.8V280c0-5.9 3.2-11.2 8.3-14l176-96z"></path>
                 </svg>
                 <div class="d-flex flex-column"><span class="focus-ring focus-ring-primary fs-5">Mini Kraken</span><span class="lh-0">Ferramenta auxiliadora de RPG de mesa.</span></div>
             </div>
-        </a><a class="dropdown-item d-flex justify-content-sm-start" href="/apps/books.html" rel="help" data-bs-target="https://nutri.arkanus.app">
+        </a><a class="dropdown-item d-flex justify-content-sm-start" href="/apps/books" rel="help" data-bs-target="/apps/books">
             <div class="d-flex justify-content-center align-items-center m-2"><svg class="fs-1 text-primary border rounded border-0 p-2 me-2 nav_icon_background" xmlns="http://www.w3.org/2000/svg" viewBox="-32 0 512 512" width="1em" height="1em" fill="currentColor">
                     <path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"></path>
                 </svg>
                 <div class="d-flex flex-column"><span class="focus-ring focus-ring-primary fs-5">Book Database </span><span class="lh-0">App para gerenciar Acervos Literários</span></div>
             </div>
-        </a><a class="dropdown-item d-flex justify-content-sm-start" href="https://nutri.arkanus.app" rel="help" data-bs-target="https://nutri.arkanus.app">
+        </a><a class="dropdown-item d-flex justify-content-sm-start" href="https://nutri.arkanus.app" target="_blank" rel="help" data-bs-target="https://nutri.arkanus.app">
             <div class="d-flex justify-content-center align-items-center m-2"><svg class="fs-1 text-success border rounded border-0 p-2 me-2 nav_icon_background" xmlns="http://www.w3.org/2000/svg" viewBox="-32 0 512 512" width="1em" height="1em" fill="currentColor">
                     <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"></path>
                 </svg>
                 <div class="d-flex flex-column"><span class="focus-ring focus-ring-primary fs-5">Ferramenta Nutricional</span><span class="lh-0">Uma calculadora de Gasto Energetico.</span></div>
             </div>
-        </a><a class="dropdown-item d-flex justify-content-sm-start" href="https://nutri.arkanus.app" rel="help" data-bs-target="https://nutri.arkanus.app">
+        </a><a class="dropdown-item d-flex justify-content-sm-start" href="/apps" rel="help" data-bs-target="/apps">
             <div class="d-flex justify-content-center align-items-center m-2"><svg class="fs-1 border rounded border-0 p-2 me-2 nav_icon_background" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" fill="currentColor">
                     <path d="M315.4 15.5C309.7 5.9 299.2 0 288 0s-21.7 5.9-27.4 15.5l-96 160c-5.9 9.9-6.1 22.2-.4 32.2s16.3 16.2 27.8 16.2H384c11.5 0 22.2-6.2 27.8-16.2s5.5-22.3-.4-32.2l-96-160zM288 312V456c0 22.1 17.9 40 40 40H472c22.1 0 40-17.9 40-40V312c0-22.1-17.9-40-40-40H328c-22.1 0-40 17.9-40 40zM128 512a128 128 0 1 0 0-256 128 128 0 1 0 0 256z"></path>
                 </svg>
@@ -89,16 +89,16 @@ function footer(t, rota) {
             <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column item">
                 <b class="fs-6 mb-0 pb-0">${t.footer.util} </b>
                 <ul class="list-unstyled">
-                    <li><a href="https://rpg.arkanus.app">${t.footer.start}</a></li>
-                    <li><a href="https://rpg.arkanus.app/sitemap.xml">${t.footer.map}</a></li>
+                    <li><a href="https://arkanus.app">${t.footer.start}</a></li>
+                    <li><a href="https://arkanus.app/sitemap.xml">${t.footer.map}</a></li>
                     <li></li>
                 </ul>
             </div>
             <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column item">
                 <b class="fs-6 mb-0 pb-0">${t.footer.about}</b>
                 <ul class="list-unstyled">
-                    <li><a href="https://arkanus.app/team">${t.footer.team}</a></li>
-                    <li><a href="https://arkanus.app/quest">${t.footer.quest}</a></li>
+                    <li><a href="https://arkanus.app/about">${t.footer.team}</a></li>
+                    <li><a href="https://arkanus.app/about">${t.footer.quest}</a></li>
                     <li></li>
                 </ul>
             </div> 

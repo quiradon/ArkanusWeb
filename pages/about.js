@@ -62,7 +62,7 @@ ${head(`${t.lang}${rota}`,`Sobre`,'Conheça um pouco mais sobre a Arkanus e sua 
     ${tag_title_paragraph('Quem Somos', 'Nossa Missão', 'Arkanus não é uma empresa, mas sim um grupo de desenvolvimento - uma comunidade colaborativa de profissionais que se unem com o objetivo compartilhado de desenvolver seus projetos pessoais e ideias. Este ambiente proporciona oportunidades individuais para que cada desenvolvedor e membro tenha total independência criativa em seus projetos. Oferecemos suporte abrangente em todas as fases do processo, incluindo publicação, organização e desenvolvimento, garantindo que cada ideia seja cultivada e realizada com sucesso.')}
     </div> 
     <div class="container mb-5 pb-5">
-    ${tag_title_paragraph('Equipe', 'Conheça a equipe por trás da Arkanus', 'Nossa equipe é composta por pessoas talentosas e dedicadas que trabalham juntas para criar a melhor experiência possível para você.')}
+    ${tag_title_paragraph('Equipe', 'Conheça a equipe por trás da Arkanus', 'Nossa equipe é composta por pessoas talentosas e dedicadas que trabalham juntas para criar a melhor experiência possível para você e com você.')}
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-4 d-flex d-xxl-flex justify-content-center">
             ${genMemberCard('Quir', 'IU/UX', 'quiradon', '/static/img/team/Frame 7.avif', 'https://www.instagram.com/quiradon','https://github.com/quiradon','https://twitter.com/quiradon')}

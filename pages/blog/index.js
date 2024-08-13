@@ -6,6 +6,7 @@ const {getTags, mapPosts} = require('../../plugins/blog')
 
 function genCard(title,date, img, desc, autor, autorImg, tag1,tag2,tag3){
     const tags = [tag1, tag2, tag3];
+    const postUrl = `${title.replace(/ /g, '-').toLowerCase()}`;
     const tagsList = tags
         .filter(tag => tag !== null)
         .map(tag => {
@@ -13,6 +14,7 @@ function genCard(title,date, img, desc, autor, autorImg, tag1,tag2,tag3){
         })
         .join('');
     return `
+    <a href="https://arkanus.app/blog/${postUrl}" class="link-unstyled">
         <div class="col">
             <div class="card BlogCardPost"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="${img}" />
                 <div class="card-body p-4">${tagsList}
@@ -27,6 +29,7 @@ function genCard(title,date, img, desc, autor, autorImg, tag1,tag2,tag3){
                 </div>
             </div>
         </div>
+        </a>
         `
 
  }
@@ -40,11 +43,12 @@ async function page(idioma, rota) {
     const lang = idiomaR(t)
     const tags = await getTags()
     const tagsList = tags.map(tag => {
-        return `<option value="${tag.id}">${tag.nome}</option>
+        return `<option value="${tag.nome}">${tag.nome}</option>
         `
     }).join('')
 
     const posts = await mapPosts()
+
     const createCards = posts.map(post => {
         return genCard(post.titulo,post.data, post.image, post.desc, post.autor, post.pictureUrl, post.tag1, post.tag2, post.tag3)
     }).join('')
@@ -67,22 +71,25 @@ ${head(`${t.lang}${rota}`,`Blog`,"Fique por dentro de todas as novidades do mund
     <div class="container mt-5">
         <div class="row mb-3">
             <div class="col-lg-10 col-xl-7 flex-grow-1 mb-1">
-                <form class="d-flex flex-grow-1 flex-fill"><input class="form-control mx-1" type="text" placeholder="Pesquise Projetos" /><select class="form-select mx-1">
+                <form class="d-flex flex-grow-1 flex-fill"><input class="form-control mx-1" id="searchInput" type="text" placeholder="Pesquise Projetos" /><select id="tagsSelect" class="form-select mx-1">
                         <option value="1000" selected>Selecione Categoria</option>
                         ${tagsList}
                     </select></form>
             </div>
-            <div class="col-lg-2 col-xl-1 d-flex d-sm-flex d-md-flex flex-grow-1 justify-content-end align-items-end justify-content-sm-end align-items-sm-end justify-content-md-end align-items-md-end mb-1"><button class="btn btn-outline-primary flex-grow-1 mx-1" type="submit">Pesquisar</button></div>
+            <div class="col-lg-2 col-xl-1 d-flex d-sm-flex d-md-flex flex-grow-1 justify-content-end align-items-end justify-content-sm-end align-items-sm-end justify-content-md-end align-items-md-end mb-1"><button id="searchBtn" class="btn btn-primary flex-grow-1 mx-1" type="submit">Pesquisar</button></div>
             </div>
 </section>
 <div class="container py-4 py-xl-5">
-    <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center">
+    <div id="postsContainer" class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center">
         ${createCards}
     </div>
 </div>
 
     ${footer(t,rota)}
     ${scripts}
+    <script src='/static/js/blog.js' async></script>
+
+
 </body>
 </html>
 `
