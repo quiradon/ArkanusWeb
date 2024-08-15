@@ -46,7 +46,7 @@ function landing(){
             <div class="col-md-12 col-xl-10 col-xxl-9 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
                 <div class="mb-5">
                     <h1 class="display-1 fw-bold" style="font-family: 'PT Sans', sans-serif;">Desenvolvendo <br> <span id="animated-landing-text" class="fw-bold text-primary" style="font-family: 'PT Sans', sans-serif;"></span> para você e sua empresa<span style="color: rgb(81, 0, 255);">.</span></h1>
-                    <p class="lead text-secondary -3" style="font-family: 'PT Sans', sans-serif;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </p>
+                    <p class="lead text-secondary -3" style="font-family: 'PT Sans', sans-serif;">Conquiste mais clientes e impulsione seu negócio com soluções inovadoras e personalizadas que atendem às suas necessidades, Tenha ao seu lado melhor que a tecnologia pode oferecer.</p>
                     <button class="btn btn-outline-primary btn-lg border-2 px-5 mb-5" type="button">Ver Projetos</button>
                 </div>
             </div>
@@ -102,14 +102,14 @@ function portifolio() {
     <section>
     <div class="container py-5">
         <div class="row py-5">
-            <div class="col-lg-7 d-lg-flex align-items-lg-center">
+            <div class="col-lg-6 d-lg-flex align-items-lg-center">
                 <div class="mb-5">
                     <h4 class="fw-semibold text-primary mb-0"><strong>Portifólio</strong></h4>
                     <h1 class="display-5 fw-bold mt-0">Conheça nossas Soluções!</h1>
                     <p class="lead text-secondary" style="font-family: 'PT Sans', sans-serif;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </p><button class="btn btn-outline-primary btn-lg border-2 border-primary px-5" type="button">Ver Projetos</button>
                 </div>
             </div>
-            <div class="col"><img class="img-fluid" src="/static/img/paterns/placeholder1.avif" /></div>
+            <div class="col"><img class="img-fluid HoverGrow" src="/static/img/misc/services/sites.avif" /></div>
         </div>
     </div>
 </section>`

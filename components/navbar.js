@@ -87,7 +87,7 @@ function footer(t, rota) {
     <div class="container py-4 py-lg-5">
         <div class="row justify-content-center">
             <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column item">
-                <b class="fs-6 mb-0 pb-0">"Utilitário"</b>
+                <b class="fs-6 mb-0 pb-0">Utilitário</b>
                 <ul class="list-unstyled">
                     <li><a href="https://arkanus.app">${t.footer.start}</a></li>
                     <li><a href="https://arkanus.app/sitemap.xml">${t.footer.map}</a></li>
