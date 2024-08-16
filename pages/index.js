@@ -106,7 +106,7 @@ function portifolio() {
                 <div class="mb-5">
                     <h4 class="fw-semibold text-primary mb-0"><strong>Portifólio</strong></h4>
                     <h1 class="display-5 fw-bold mt-0">Conheça nossas Soluções!</h1>
-                    <p class="lead text-secondary" style="font-family: 'PT Sans', sans-serif;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </p><button class="btn btn-outline-primary btn-lg border-2 border-primary px-5" type="button">Ver Projetos</button>
+                    <p class="lead text-secondary" style="font-family: 'PT Sans', sans-serif;">Explore nossos trabalhos e soluções e descubra como podemos impulsionar o crescimento e aprimorar sua empresa por meio da tecnologia.</p><button class="btn btn-outline-primary btn-lg border-2 border-primary px-5" type="button">Ver Projetos</button>
                 </div>
             </div>
             <div class="col"><img class="img-fluid HoverGrow" src="/static/img/misc/services/sites.avif" /></div>
@@ -118,7 +118,7 @@ function portifolio() {
 function blog(posts) {
     return `
     <section>
-    ${tag_title_paragraph("Blog","Ultimas Postagens","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ")}
+    ${tag_title_paragraph("Blog","Ultimas Postagens","Fique por dentro das novidades do mundo da tecnologia e do desenvolvimento de software. Acompanhe relatos, tutoriais e dicas para melhorar o sua empresa ou projeto.")}
     <div class="container">
     <div class="row justify-content-center align-items-center">
         <div class="col-10 col-sm-12 col-md-12 col-lg-10 col-xl-6 col-xxl-6 offset-xl-0 p-1">
