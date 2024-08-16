@@ -38,7 +38,7 @@ function head(rota,title,desc,pictureURL) {
     <title>${title} | Arkanus</title>
     <meta name="description" content="${desc}">
     <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
-    <meta name="theme-color" content="#f80752">
+    <meta name="theme-color" content="#5100ff">
     <link rel="stylesheet" href="/static/css/bs-theme-overrides.css">
     <link rel="stylesheet" href="/static/css/animate.min.css">
     <link rel="stylesheet" href="/static/css/styles.css">

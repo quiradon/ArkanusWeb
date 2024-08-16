@@ -22,7 +22,7 @@ async function page(idioma, rota) {
     return `
 <!DOCTYPE html>
 <html lang="${t.lang}" data-bs-theme="dark">
-${head(`${t.lang}${rota}`,`Inicio`,'Arkanus - Desenvolvimento de Sites e Aplicativos')}
+${head(`${t.lang}${rota}`,`Inicio`,'Empresa de desenvolvimento de software e tecnologia, descubra como podemos ajudar você e sua empresa a crescer.',"/static/img/misc/services/web_development.avif")}
 <body>
     ${nav(t, rota)}
     ${landing()}
