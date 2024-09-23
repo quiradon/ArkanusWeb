@@ -140,7 +140,7 @@ let pt = require('../i18n/pt.json');
 function page(post) {
     return `
 <!DOCTYPE html>
-<html lang="pt-BR" data-bs-theme="dark">
+<html lang="pt-BR" data-bs-theme="light">
 ${head(`/teste`,post.titulo,post.desc,post.image)}
 <body>
     ${nav(pt, '/teste')}

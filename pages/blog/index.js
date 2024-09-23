@@ -53,7 +53,7 @@ async function page(idioma, rota) {
     }).join('')
     return `
 <!DOCTYPE html>
-<html lang="${t.lang}" data-bs-theme="dark">
+<html lang="${t.lang}" data-bs-theme="light">
 ${head(`${t.lang}${rota}`,`Blog`,"Fique por dentro de todas as novidades do mundo da tecnologia e inovação.")}
 <body>
     <input type="text" id="json_posts" value='${JSON.stringify(posts)}' hidden>

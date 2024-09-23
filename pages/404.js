@@ -13,7 +13,7 @@ function page(idioma, rota) {
     const lang = idiomaR(t)
     return `
 <!DOCTYPE html>
-<html lang="${t.lang}" data-bs-theme="dark">
+<html lang="${t.lang}" data-bs-theme="light">
 ${head(`${t.lang}${rota}`,`${t.PageNotFound.title}`,t.PageNotFound.desc)}
 <body>
     ${nav(t, rota)}

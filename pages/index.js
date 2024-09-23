@@ -19,9 +19,9 @@ async function page(idioma, rota) {
     const t = idioma
     const posts = await mapPosts() //pegue apenas os 5 primeiros itens
 
-    return `
+    return ` 
 <!DOCTYPE html>
-<html lang="${t.lang}" data-bs-theme="dark">
+<html lang="${t.lang}" data-bs-theme="light">
 ${head(`${t.lang}${rota}`,`Inicio`,'Empresa de desenvolvimento de software e tecnologia, descubra como podemos ajudar você e sua empresa a crescer.',"/static/img/misc/services/web_development.avif")}
 <body>
     ${nav(t, rota)}
@@ -47,7 +47,7 @@ function landing(){
                 <div class="mb-5">
                     <h1 class="display-1 fw-bold" style="font-family: 'PT Sans', sans-serif;">Desenvolvendo <br> <span id="animated-landing-text" class="fw-bold text-primary" style="font-family: 'PT Sans', sans-serif;"></span> para você e sua empresa<span style="color: rgb(81, 0, 255);">.</span></h1>
                     <p class="lead text-secondary -3" style="font-family: 'PT Sans', sans-serif;">Conquiste mais clientes e impulsione seu negócio com soluções inovadoras e personalizadas que atendem às suas necessidades, Tenha ao seu lado melhor que a tecnologia pode oferecer.</p>
-                    <button class="btn btn-outline-primary btn-lg border-2 px-5 mb-5" type="button">Ver Projetos</button>
+                    <button class="btn btn-outline-primary btn-lg border-2 px-5 mb-5" type="button" onclick="window.location.href='https://arkanus.app/apps'">Ver Projetos</button>
                 </div>
             </div>
         </div>
@@ -106,7 +106,7 @@ function portifolio() {
                 <div class="mb-5">
                     <h4 class="fw-semibold text-primary mb-0"><strong>Portifólio</strong></h4>
                     <h1 class="display-5 fw-bold mt-0">Conheça nossas Soluções!</h1>
-                    <p class="lead text-secondary" style="font-family: 'PT Sans', sans-serif;">Explore nossos trabalhos e soluções e descubra como podemos impulsionar o crescimento e aprimorar sua empresa por meio da tecnologia.</p><button class="btn btn-outline-primary btn-lg border-2 border-primary px-5" type="button">Ver Projetos</button>
+                    <p class="lead text-secondary" style="font-family: 'PT Sans', sans-serif;">Explore nossos trabalhos e soluções e descubra como podemos impulsionar o crescimento e aprimorar sua empresa por meio da tecnologia.</p><button class="btn btn-outline-primary btn-lg border-2 border-primary px-5" type="button" onclick="window.open('/apps',)">Ver Projetos</button>
                 </div>
             </div>
             <div class="col"><img class="img-fluid HoverGrow" src="/static/img/misc/services/sites.avif" /></div>

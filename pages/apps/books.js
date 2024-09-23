@@ -11,7 +11,7 @@ function page(idioma, rota) {
     const lang = idiomaR(t)
     return `
 <!DOCTYPE html>
-<html lang="${t.lang}" data-bs-theme="dark">
+<html lang="${t.lang}" data-bs-theme="light">
 ${head(`${t.lang}${rota}`,"Book Database","Um software de gerenciamento de bibliotecas de livros Open Source oferece uma solução flexível e acessível para instituições que buscam organizar e administrar suas coleções de forma eficiente e simplificada.","/static/img/apps/Frame 1.webp")}
 <body>
     ${nav(t, rota)}
