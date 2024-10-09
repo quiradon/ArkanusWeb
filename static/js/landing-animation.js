@@ -1,8 +1,4 @@
 console.log('animação')
-//id = animated-landing-text
-
-//faça uma animação para o texto como uma maquina de escrever que escreve e apaga alternando entre as palavras "Soluções" e "Projetos" a cada 2 segundos
-
 const text = document.getElementById('animated-landing-text');
 let i = 0;
 let words = ['Soluções', 'Jogos', 'Projetos', 'Automações'];
